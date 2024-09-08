@@ -1,0 +1,46 @@
+{
+    "scintilla_DSE_ABS_exp": {
+        "information":{
+            "authors":"Diamondback",
+            "name":"Anti-Lock Braking System (Experimental)",
+            "value":250,
+        },
+        "slotType" : "scintilla_DSE_ABS_nop",
+
+        "controller": [
+            ["fileName"],
+            ["drivingDynamics/supervisors/absControl" {"name": "absControl"}]
+        ],
+
+        "absControl": {
+            "absControlledWheels": ["FL", "FR", "RL", "RR"]
+        }
+
+        "brakeControl": {
+            "useForTractionControl": true,
+            "absControl": {
+                "wheelSettings":[
+                    ["wheelName",   "slipThreshold",    "absFrequency", "kP",   "kI",   "kD",   "integralInCoef",   "integralOutCoef",  "minSteeringCoef",  "steeringCoefYawRate"   ],
+                    ["FL",          0.10,               100,            5.00,   0.50,   0.10,   200,                80,                 1,                  0.2                     ],
+                    ["FR",          0.10,               100,            5.00,   0.50,   0.10,   200,                80,                 1,                  0.2                     ],
+                    ["RL",          0.10,               100,            5.00,   0.50,   0.10,   200,                80,                 0.1,                0.2                     ],
+                    ["RR",          0.10,               100,            5.00,   0.50,   0.10,   200,                80,                 0.1,                0.2                     ],
+                ]
+            }
+        }
+    },
+    "scintilla_DSE_ABS": {
+        "information":{
+            "authors":"Diamondback",
+            "name":"Anti-Lock Braking System",
+            "value":250,
+        },
+        "slotType" : "scintilla_DSE_ABS",
+
+        "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //brakes
+            {"enableABS":true},
+        ],
+    },
+}

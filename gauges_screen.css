@@ -1,0 +1,92 @@
+@font-face {
+  font-family: Conthrax;
+  src: url(/ui/common/conthrax-sb.otf), url(/ui/common/conthrax-sb-it.otf);
+}
+
+body {
+  margin: 0;
+  padding-top: 0px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-family: Conthrax;
+  font-size: 35px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.fade-in {
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeout {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+.slide-right {
+  animation: slideRight 2s;
+}
+
+@keyframes slideRight {
+  from {transform: translateX(-100px)}
+  to {transform: translateX(0px)}
+}
+
+.slide-left {
+  animation: slideLeft 2s;
+}
+
+@keyframes slideLeft {
+  from {transform: translate(200px, 4px)}
+  to {transform: translate(77px, 4px)}
+}
+
+.blink{
+  animation: blink 0.5s steps(2, end) infinite;
+}
+
+@keyframes blink{ /*because CEF is a pill of cabage*/
+  0%{display: block; }
+  100%{display: none; visibility: hidden; opacity:0; fill-opacity: 0; fill:#000}
+}
+
+@keyframes blinkRedLine{
+  0%{filter:url(#filterRedline); }
+  100%{filter:url(#filterRedline2);}
+}
+
+@keyframes botIn {
+  from {transform: translateY(6px)}
+  to {transform: translateY(0px)}
+}
+
+@keyframes botOut {
+  from {transform: translateY(0px)}
+  to {transform: translateY(6px)}
+}
+
+.botIn {
+  animation: botIn 0.5s ease-in-out forwards, fadein 0.5s forwards;
+}
+
+.botOut {
+  animation: botOut 0.5s ease-in-out forwards, fadeout 0.5s forwards;
+}
+
+@keyframes blinkGreyFilter{
+  0%{filter:url(#filterGrey); }
+  100%{filter:"";}
+}
+
+@keyframes blinkGreyFill{
+  0%{fill:#000000; }
+  100%{}
+}

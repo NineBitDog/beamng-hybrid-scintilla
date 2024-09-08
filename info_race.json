@@ -1,0 +1,46 @@
+{
+  "0-100 km/h":3,
+  "0-100 mph":5.2,
+  "0-200 km/h":7.2,
+  "0-200 mph":20.9,
+  "0-300 km/h":17.3,
+  "0-60 mph":2.9,
+  "100-0 km/h":28.2,
+  "100-200 km/h":4.1,
+  "60-0 mph":86.9,
+  "60-100 mph":2.3,
+  "BoundingBox":[
+    [
+      -0.816,
+      -1.836,
+      -0.1444
+    ],
+    [
+      1.416,
+      2.754,
+      1.093
+    ]
+  ],
+  "Braking G":1.395,
+  "Config Type":"Custom",
+  "Configuration":"Race (Sequential)",
+  "Description":"   Lightweight track version with a tuned 5.0L V10 and race parts",
+  "Drivetrain":"RWD",
+  "Fuel Type":"Gasoline",
+  "Induction Type":"NA",
+  "Off-Road Score":20,
+  "Population":10,
+  "Power":748,
+  "PowerPeakRPM":8850,
+  "Propulsion":"ICE",
+  "Top Speed":93.10745881,
+  "Torque":595,
+  "TorquePeakRPM":8250,
+  "Transmission":"Sequential",
+  "Value":615000,
+  "Weight":1285,
+  "Weight/Power":1.717914439,
+  "defaultPaintName1":"Azzurro",
+  "defaultPaintName2":"Nero Puro",
+  "defaultPaintName3":"Arancio Metallizzato"
+}

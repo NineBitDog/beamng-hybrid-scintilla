@@ -1,0 +1,424 @@
+{
+"scintilla_brake_F": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Front Disc Brakes",
+        "value":1250,
+    },
+    "slotType" : "scintilla_brake_F",
+    "slots": [
+        ["type", "default", "description"],
+        ["brakepad_F","brakepad_F_semi_race", "Front Brake Pads", {"coreSlot":true}],
+        ["scintilla_calipers_F","scintilla_calipers_F_red", "Front Brake Calipers", {"coreSlot":true}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //brake discs
+        ["scintilla_brakedisc_F", ["wheel_FR","wheelhub_FR"],        [], {"pos":{"x":-0.84,"y":-1.3347, "z":0.3475}, "scale":{"x":1.0,"y":1.0,"z":1.0}, "rot":{"x":0,"y":0,"z":180}}],
+        ["scintilla_brakedisc_F", ["wheel_FL","wheelhub_FL"],        [], {"pos":{"x": 0.84,"y":-1.3347, "z":0.3475}, "scale":{"x":1.0,"y":1.0,"z":1.0}, "rot":{"x":0,"y":0,"z":180}}],
+
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //brakes
+        {"brakeTorque":"$=$brakestrength*3100"},
+        {"brakeInputSplit":1},
+        {"brakeSplitCoef":1},
+        {"parkingTorque":0},
+        {"brakeSpring":120},
+
+        //brake thermals
+        {"enableBrakeThermals":true},
+        {"brakeDiameter":0.36},
+        {"brakeMass":10.5},
+        {"brakeType":"vented-disc"},
+        {"rotorMaterial":"steel"},
+        {"brakeVentingCoef":1.5},
+        {"absSlipRatioTarget":0.2},
+        //hub
+        //general settings
+        {"hubRadius":0.18},
+        {"wheelOffset":0.0},
+        {"hubWidth":0.05},
+        {"numRays":5},
+
+        //hub options
+        {"hubTreadBeamSpring":1128940, "hubTreadBeamDamp":5.64},
+        {"hubPeripheryBeamSpring":1128940, "hubPeripheryBeamDamp":5.64},
+        {"hubSideBeamSpring":2256940, "hubSideBeamDamp":5.64},
+        {"hubNodeWeight":0.7},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.2},
+        {"hubBeamDeform":45500, "hubBeamStrength":87500},
+        //brake sounds
+        {"squealCoefNatural": 0.0, "squealCoefLowSpeed": 0.5}
+    ],
+},
+"scintilla_brake_F_carbon": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Carbon-Ceramic Front Disc Brakes",
+        "value":3250,
+    },
+    "slotType" : "scintilla_brake_F",
+    "slots": [
+        ["type", "default", "description"],
+        ["brakepad_F_carbon","brakepad_F_carbon", "Front Brake Pads", {"coreSlot":true}],
+        ["scintilla_calipers_F","scintilla_calipers_F_yellow", "Front Brake Calipers", {"coreSlot":true}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //brake discs
+        ["scintilla_brakedisc_F_carbon", ["wheel_FR","wheelhub_FR"],        [], {"pos":{"x":-0.84,"y":-1.3347, "z":0.3475}, "scale":{"x":1.0,"y":1.0,"z":1.0}, "rot":{"x":0,"y":0,"z":180}}],
+        ["scintilla_brakedisc_F_carbon", ["wheel_FL","wheelhub_FL"],        [], {"pos":{"x": 0.84,"y":-1.3347, "z":0.3475}, "scale":{"x":1.0,"y":1.0,"z":1.0}, "rot":{"x":0,"y":0,"z":180}}],
+
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$brakebias", "range", "", "Brakes", 0.6, 0, 1, "Front/Rear Bias", "Percent of brake torque to the front wheels", {"minDis":0, "maxDis":100}],
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //brakes
+        {"brakeTorque":"$=$brakestrength*5333*$brakebias"},
+        {"brakeInputSplit":1},
+        {"brakeSplitCoef":1},
+        {"parkingTorque":0},
+        {"brakeSpring":120},
+        {"padMaterial":"carbon-ceramic", "padGlazingSusceptibility":0.0},
+
+        //brake thermals
+        {"enableBrakeThermals":true},
+        {"brakeDiameter":0.36},
+        {"brakeMass":4.25},
+        {"brakeType":"carbon-ceramic-vented-disc"},
+        {"rotorMaterial":"carbon-ceramic"},
+        {"brakeVentingCoef":1.3},
+        {"absSlipRatioTarget":0.18},
+
+        //hub
+        //general settings
+        {"hubRadius":0.18},
+        {"wheelOffset":0.0},
+        {"hubWidth":0.05},
+        {"numRays":5},
+
+        //hub options
+        {"hubTreadBeamSpring":1128940, "hubTreadBeamDamp":5.64},
+        {"hubPeripheryBeamSpring":1128940, "hubPeripheryBeamDamp":5.64},
+        {"hubSideBeamSpring":2256940, "hubSideBeamDamp":5.64},
+        {"hubNodeWeight":0.6},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.2},
+        {"hubBeamDeform":45500, "hubBeamStrength":87500},
+        //brake sounds
+        {"squealCoefNatural": 0.0, "squealCoefLowSpeed": 0.5}
+    ],
+},
+"scintilla_calipers_F_red": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Red Front Brake Calipers",
+        "value":1250,
+    },
+    "slotType" : "scintilla_calipers_F",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //brake calipers
+        ["scintilla_caliper_F_red",   ["scintilla_hub_F","wheelhub_FR"], [], {"pos":{"x":-0.84,"y":-1.3347, "z":0.3475}, "scale":{"x":1.0,"y":1.0,"z":1.0}, "rot":{"x":180,"y":0,"z":180}}],
+        ["scintilla_caliper_F_red",   ["scintilla_hub_F","wheelhub_FL"], [], {"pos":{"x": 0.84,"y":-1.3347, "z":0.3475}, "scale":{"x":1.0,"y":1.0,"z":1.0}, "rot":{"x":0,"y":0,"z":0}}],
+    ],
+},
+"scintilla_calipers_F_yellow": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Yellow Front Brake Calipers",
+        "value":1250,
+    },
+    "slotType" : "scintilla_calipers_F",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //brake calipers
+        ["scintilla_caliper_F_yellow",   ["scintilla_hub_F","wheelhub_FR"], [], {"pos":{"x":-0.84,"y":-1.3347, "z":0.3475}, "scale":{"x":1.0,"y":1.0,"z":1.0}, "rot":{"x":180,"y":0,"z":180}}],
+        ["scintilla_caliper_F_yellow",   ["scintilla_hub_F","wheelhub_FL"], [], {"pos":{"x": 0.84,"y":-1.3347, "z":0.3475}, "scale":{"x":1.0,"y":1.0,"z":1.0}, "rot":{"x":0,"y":0,"z":0}}],
+    ],
+},
+"scintilla_calipers_F_blue": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Blue Front Brake Calipers",
+        "value":1250,
+    },
+    "slotType" : "scintilla_calipers_F",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //brake calipers
+        ["scintilla_caliper_F_blue",   ["scintilla_hub_F","wheelhub_FR"], [], {"pos":{"x":-0.84,"y":-1.3347, "z":0.3475}, "scale":{"x":1.0,"y":1.0,"z":1.0}, "rot":{"x":180,"y":0,"z":180}}],
+        ["scintilla_caliper_F_blue",   ["scintilla_hub_F","wheelhub_FL"], [], {"pos":{"x": 0.84,"y":-1.3347, "z":0.3475}, "scale":{"x":1.0,"y":1.0,"z":1.0}, "rot":{"x":0,"y":0,"z":0}}],
+    ],
+},
+"scintilla_calipers_R_red": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Red Rear Brake Calipers",
+        "value":1250,
+    },
+    "slotType" : "scintilla_calipers_R",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //brake calipers
+        ["scintilla_caliper_R_red",   ["scintilla_hub_R","wheelhub_RR"], [], {"pos":{"x":-0.84,"y":1.320, "z":0.3476}, "scale":{"x":1.0,"y":1.0,"z":1.0}, "rot":{"x":180,"y":0,"z":180}}],
+        ["scintilla_caliper_R_red",   ["scintilla_hub_R","wheelhub_RL"], [], {"pos":{"x": 0.84,"y":1.320, "z":0.3476}, "scale":{"x":1.0,"y":1.0,"z":1.0}, "rot":{"x":0,"y":0,"z":0}}],
+    ],
+},
+"scintilla_calipers_R_yellow": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Yellow Rear Brake Calipers",
+        "value":1250,
+    },
+    "slotType" : "scintilla_calipers_R",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //brake calipers
+        ["scintilla_caliper_R_yellow",   ["scintilla_hub_R","wheelhub_RR"], [], {"pos":{"x":-0.84,"y":1.320, "z":0.3476}, "scale":{"x":1.0,"y":1.0,"z":1.0}, "rot":{"x":180,"y":0,"z":180}}],
+        ["scintilla_caliper_R_yellow",   ["scintilla_hub_R","wheelhub_RL"], [], {"pos":{"x": 0.84,"y":1.320, "z":0.3476}, "scale":{"x":1.0,"y":1.0,"z":1.0}, "rot":{"x":0,"y":0,"z":0}}],
+    ],
+},
+"scintilla_calipers_R_blue": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Blue Rear Brake Calipers",
+        "value":1250,
+    },
+    "slotType" : "scintilla_calipers_R",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //brake calipers
+        ["scintilla_caliper_R_blue",   ["scintilla_hub_R","wheelhub_RR"], [], {"pos":{"x":-0.84,"y":1.320, "z":0.3476}, "scale":{"x":1.0,"y":1.0,"z":1.0}, "rot":{"x":180,"y":0,"z":180}}],
+        ["scintilla_caliper_R_blue",   ["scintilla_hub_R","wheelhub_RL"], [], {"pos":{"x": 0.84,"y":1.320, "z":0.3476}, "scale":{"x":1.0,"y":1.0,"z":1.0}, "rot":{"x":0,"y":0,"z":0}}],
+    ],
+},
+"scintilla_brake_R": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Rear Disc Brakes",
+        "value":1100,
+    },
+    "slotType" : "scintilla_brake_R",
+    "slots": [
+        ["type", "default", "description"],
+        ["brakepad_R","brakepad_R_semi_race", "Rear Brake Pads", {"coreSlot":true}],
+        ["scintilla_calipers_R","scintilla_calipers_R_red", "Rear Brake Calipers", {"coreSlot":true}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //brake discs
+        ["scintilla_brakedisc_R", ["wheel_RR","wheelhub_RR"],        [], {"pos":{"x":-0.84,"y":1.320, "z":0.3476}, "scale":{"x":1.0,"y":1.0,"z":1.0}, "rot":{"x":0,"y":0,"z":180}}],
+        ["scintilla_brakedisc_R", ["wheel_RL","wheelhub_RL"],        [], {"pos":{"x": 0.84,"y":1.320, "z":0.3476}, "scale":{"x":1.0,"y":1.0,"z":1.0}, "rot":{"x":0,"y":0,"z":180}}],
+
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //brakes
+        {"brakeTorque":"$=$brakestrength*2000"},
+        {"brakeInputSplit":0.65},
+        {"brakeSplitCoef":0.45},
+        {"parkingTorque":2500},
+        {"brakeSpring":120},
+
+        //brake thermals
+        {"enableBrakeThermals":true},
+        {"brakeDiameter":0.32},
+        {"brakeMass":7.25},
+        {"brakeType":"vented-disc"},
+        {"rotorMaterial":"steel"},
+        {"brakeVentingCoef":1.2},
+        {"absSlipRatioTarget":0.14},
+        //hub
+        //general settings
+        {"hubRadius":0.16},
+        {"wheelOffset":0.0},
+        {"hubWidth":0.05},
+        {"numRays":5},
+
+        //hub options
+        {"hubTreadBeamSpring":1128940, "hubTreadBeamDamp":5.64},
+        {"hubPeripheryBeamSpring":1128940, "hubPeripheryBeamDamp":5.64},
+        {"hubSideBeamSpring":2256940, "hubSideBeamDamp":5.64},
+        {"hubNodeWeight":0.7},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.2},
+        {"hubBeamDeform":45500, "hubBeamStrength":87500},
+        //brake sounds
+        {"squealCoefNatural": 0.0, "squealCoefLowSpeed": 0.0}
+    ],
+},
+"scintilla_brake_R_carbon": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Carbon-Ceramic Rear Disc Brakes",
+        "value":1100,
+    },
+    "slotType" : "scintilla_brake_R",
+    "slots": [
+        ["type", "default", "description"],
+        ["brakepad_R_carbon","brakepad_R_carbon", "Rear Brake Pads", {"coreSlot":true}],
+        ["scintilla_calipers_R","scintilla_calipers_R_yellow", "Rear Brake Calipers", {"coreSlot":true}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //brake discs
+        ["scintilla_brakedisc_R_carbon", ["wheel_RR","wheelhub_RR"],        [], {"pos":{"x":-0.84,"y":1.320, "z":0.3476}, "scale":{"x":1.0,"y":1.0,"z":1.0}, "rot":{"x":0,"y":0,"z":180}}],
+        ["scintilla_brakedisc_R_carbon", ["wheel_RL","wheelhub_RL"],        [], {"pos":{"x": 0.84,"y":1.320, "z":0.3476}, "scale":{"x":1.0,"y":1.0,"z":1.0}, "rot":{"x":0,"y":0,"z":180}}],
+
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //brakes
+        {"brakeTorque":"$=$brakebias == nil and $brakestrength*2150 or $brakestrength*5333*(1-$brakebias)"},
+        {"brakeInputSplit":0.65},
+        {"brakeSplitCoef":0.45},
+        {"parkingTorque":2500},
+        {"brakeSpring":120},
+        {"padMaterial":"carbon-ceramic", "padGlazingSusceptibility":0.0},
+
+        //brake thermals
+        {"enableBrakeThermals":true},
+        {"brakeDiameter":0.32},
+        {"brakeMass":3.2},
+        {"brakeType":"carbon-ceramic-vented-disc"},
+        {"rotorMaterial":"carbon-ceramic"},
+        {"brakeVentingCoef":1.1},
+        {"absSlipRatioTarget":0.14},
+        //hub
+        //general settings
+        {"hubRadius":0.18},
+        {"wheelOffset":0.0},
+        {"hubWidth":0.05},
+        {"numRays":5},
+
+        //hub options
+        {"hubTreadBeamSpring":1128940, "hubTreadBeamDamp":5.64},
+        {"hubPeripheryBeamSpring":1128940, "hubPeripheryBeamDamp":5.64},
+        {"hubSideBeamSpring":2256940, "hubSideBeamDamp":5.64},
+        {"hubNodeWeight":0.6},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.2},
+        {"hubBeamDeform":45500, "hubBeamStrength":87500},
+        //brake sounds
+        {"squealCoefNatural": 0.0, "squealCoefLowSpeed": 0.0}
+    ],
+},
+"scintilla_race_alt_brake_F": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Clearanced Race Front Disc Brakes",
+        "value":1400,
+    },
+    "slotType" : "scintilla_brake_F",
+    "slots": [
+        ["type", "default", "description"],
+        ["brakepad_F","brakepad_F_race", "Front Brake Pads", {"coreSlot":true}],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$brakebias", "range", "", "Brakes", 0.6, 0, 1, "Front/Rear Bias", "Percent of brake torque to the front wheels", {"minDis":0, "maxDis":100}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //brake discs
+        ["brake_disc_drilled",             ["wheel_FR","wheelhub_FR"],    [],  {"pos":{"x":-0.84,"y":-1.3347, "z":0.3475}, "scale":{"x":0.9, "y":0.95, "z":0.95},  "rot":{"x":0,   "y":0,  "z":0  }}],
+        ["brake_disc_drilled",             ["wheel_FL","wheelhub_FL"],    [],  {"pos":{"x": 0.84,"y":-1.3347, "z":0.3475}, "scale":{"x":0.9, "y":0.95, "z":0.95},  "rot":{"x":180, "y":0,  "z":0  }}],
+        ["brake_caliper_4pot_red_rotopad", ["scintilla_hub_F"], [], {"pos":{"x":-0.84,"y":-1.3347, "z":0.3475}, "scale":{"x":0.9, "y":0.95, "z":0.95},  "rot":{"x":180, "y":0,  "z":0  }}],
+        ["brake_caliper_4pot_red_rotopad", ["scintilla_hub_F"], [], {"pos":{"x": 0.84,"y":-1.3347, "z":0.3475}, "scale":{"x":0.9, "y":0.95, "z":0.95},  "rot":{"x":180,  "y":180,"z":0  }}],
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"brakeTorque":"$=$brakestrength*5000*$brakebias"},
+        {"brakeInputSplit":1},
+        {"brakeSplitCoef":1},
+        {"parkingTorque":0},
+        {"brakeSpring":125},
+
+        //brake thermals
+        {"enableBrakeThermals":true},
+        {"brakeDiameter":0.310},
+        {"brakeMass":9.25},
+        {"brakeType":"vented-disc"},
+        {"rotorMaterial":"steel"},
+        {"brakeVentingCoef":1.4},
+        //hub
+        //general settings
+        {"hubRadius":0.18},
+        {"wheelOffset":0.0},
+        {"hubWidth":0.05},
+        {"numRays":5},
+
+        //hub options
+        {"hubTreadBeamSpring":1128940, "hubTreadBeamDamp":5.64},
+        {"hubPeripheryBeamSpring":1128940, "hubPeripheryBeamDamp":5.64},
+        {"hubSideBeamSpring":2256940, "hubSideBeamDamp":5.64},
+        {"hubNodeWeight":0.7},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.2},
+        {"hubBeamDeform":45500, "hubBeamStrength":87500},
+        //brake sounds
+        {"squealCoefNatural": 1.0, "squealCoefLowSpeed": 1.0}
+    ],
+},
+"scintilla_race_alt_brake_R": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Clearanced Race Rear Disc Brakes",
+        "value":1300,
+    },
+    "slotType" : "scintilla_brake_R",
+    "slots": [
+        ["type", "default", "description"],
+        ["brakepad_R","brakepad_R_race", "Rear Brake Pads", {"coreSlot":true}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //brake discs
+        ["brake_disc_drilled",             ["wheel_RR","wheelhub_RR"],    [],  {"pos":{"x":-0.84,"y":1.320, "z":0.3476}, "scale":{"x":0.9, "y":0.92, "z":0.92},  "rot":{"x":0,   "y":0,  "z":0  }}],
+        ["brake_disc_drilled",             ["wheel_RL","wheelhub_RL"],    [],  {"pos":{"x": 0.84,"y":1.320, "z":0.3476}, "scale":{"x":0.9, "y":0.92, "z":0.92},  "rot":{"x":180, "y":0,  "z":0  }}],
+        ["brake_caliper_4pot_red_rotopad", ["scintilla_hub_R"], [],               {"pos":{"x":-0.84,"y":1.320, "z":0.3476}, "scale":{"x":0.9, "y":0.92, "z":0.92}, "rot":{"x":0, "y":180,  "z":0  }}],
+        ["brake_caliper_4pot_red_rotopad", ["scintilla_hub_R"], [],               {"pos":{"x": 0.84,"y":1.320, "z":0.3476}, "scale":{"x":0.9, "y":0.92, "z":0.92}, "rot":{"x":0, "y":0,"z":0  }}],
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //if no race front brake, use default value
+        {"brakeTorque":"$=$brakebias == nil and $brakestrength*2150 or $brakestrength*5000*(1-$brakebias)"},
+        {"brakeInputSplit":1},
+        {"brakeSplitCoef":1},
+        {"parkingTorque":2500},
+        {"brakeSpring":125},
+
+        //brake thermals
+        {"enableBrakeThermals":true},
+        {"brakeDiameter":0.300},
+        {"brakeMass":7.0},
+        {"brakeType":"vented-disc"},
+        {"rotorMaterial":"steel"},
+        {"brakeVentingCoef":1.15},
+        //hub
+        //general settings
+        {"hubRadius":0.18},
+        {"wheelOffset":0.0},
+        {"hubWidth":0.05},
+        {"numRays":5},
+
+        //hub options
+        {"hubTreadBeamSpring":1128940, "hubTreadBeamDamp":5.64},
+        {"hubPeripheryBeamSpring":1128940, "hubPeripheryBeamDamp":5.64},
+        {"hubSideBeamSpring":2256940, "hubSideBeamDamp":5.64},
+        {"hubNodeWeight":0.7},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.2},
+        {"hubBeamDeform":45500, "hubBeamStrength":87500},
+        //brake sounds
+        {"squealCoefNatural": 0.0, "squealCoefLowSpeed": 0.0}
+    ],
+},
+}

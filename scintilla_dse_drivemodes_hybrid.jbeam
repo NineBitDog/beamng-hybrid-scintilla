@@ -40,8 +40,8 @@
         }
 
         "driveModes": {
-            "enabledModes":["street", "sport", "off"]
-            "defaultMode": "street"
+            "enabledModes":["charge", "low", "agressive", "hot_lap"]
+            "defaultMode": "charge"
             "defaultSettings": [
                 ["type"]
                 ["exhaust" {"name": "mainEngine", "mufflingOffset": -0.25, "gainOffset": 1.0}]

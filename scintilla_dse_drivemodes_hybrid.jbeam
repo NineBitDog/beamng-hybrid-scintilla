@@ -13,9 +13,17 @@
             ["scintilla_DSE_drivemodes_aggressive","", "Aggressive"],
             ["scintilla_DSE_drivemodes_hot_lap","", "Hot Lap"],
         ]
-
+        "variables": [
+            ["name", "type", "category", "default", "min", "max", "title", "description"],
+            ["$regen", "number", "Chassis", 1, 0, 1, "Battery Regen", "Regen Percentage (x100)", {"stepDis":0.01}],
+        ],
+        "vehicleController": {
+            "motorNames": ["hybridMotor"],
+            "defaultRegen": 0.5
+            "brakeRegenCoef": 1
+        },    
         "controller": [
-            ["fileName"],
+            ["fileName"],  
             ["adaptiveBrakeLights"],
             ["driveModes"],
             ["axleLift"],

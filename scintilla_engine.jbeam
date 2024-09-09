@@ -1,8 +1,8 @@
  {
-"scintilla_engine_5.0_v10": {
+"scintilla_engine_5.0_v10_hybrid": {
     "information":{
-        "authors":"BeamNG",
-        "name":"5.0L V10 Engine",
+        "authors":"NineBitDog",
+        "name":"5.0L V10 Hybrid",
         "value":24000,
     },
     "slotType" : "scintilla_engine",
@@ -142,7 +142,7 @@
         "engineBrakeTorque":55,
         //fuel system
         "energyStorage": ["hybridBattery"],
-        "requiredEnergyType":"electric",
+        "requiredEnergyType":"electricEnergy",
     }
     "vehicleController": {
         "clutchLaunchStartRPM":1800,

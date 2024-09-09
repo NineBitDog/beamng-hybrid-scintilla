@@ -12,13 +12,12 @@
     ],
     "energyStorage": [
         ["type", "name"],
-        ["battery", "hybridBattery"],
+        ["electricBattery", "hybridBattery"],
     ],
     "hybridBattery": {
-        "energyType":"electric",
-        "fuelCapacity": 250,
-        "startingFuelCapacity": "$charge",
-        "fuel": {"[engineGroup]:":["battery"]},
+        "energyType":"electricEnergy",
+        "batteryCapacity": 250,
+        "startingCapacity": "$charge",
     },
 },
 "scintilla_fueltank_R": {

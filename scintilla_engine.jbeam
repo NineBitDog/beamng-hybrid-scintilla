@@ -150,6 +150,9 @@
         "highShiftDownRPM":[0,0,0,3500,4200,4400,4500,4600],
         "highShiftUpRPM":7900,
         "revMatchThrottle":0.7,
+        "motorNames": ["hybridMotor"],
+        "defaultRegen": 0.5,
+        "brakeRegenCoef": 1,
     },
     "flexbodies": [
          ["mesh", "[group]:", "nonFlexMaterials"],

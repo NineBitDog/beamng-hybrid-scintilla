@@ -8,7 +8,7 @@
         "slotType" : "scintilla_transfer_case",
         "powertrain" : [
             ["type", "name", "inputName", "inputIndex"],
-            ["shaft", "hybridtransfercase", "hybridMotor", 1],
+            ["shaft", "hybridtransfercase", "hybridMotor", 1, {"dynamicFriction":0.00037,"uiName":"Hybrid Transfercase"}],
             ["shaft", "transfercase", "gearbox", 1, {"deformGroups":["gearbox"], "outputPortOverride":[1], "friction":0.33, "dynamicFriction":0.00037,"uiName":"Rear Output Shaft"}],
         ],
     },

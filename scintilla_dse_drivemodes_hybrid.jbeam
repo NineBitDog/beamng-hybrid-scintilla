@@ -15,7 +15,7 @@
         ]
         "variables": [
             ["name", "type", "category", "default", "min", "max", "title", "description"],
-            ["$regen", "number", "Chassis", 1, 0, 1, "Battery Regen", "Regen Percentage (x100)", {"stepDis":0.01}],
+            ["$regen", "number", "Chassis", 1, 0, 1, "Battery Regen", "Regen Percentage", {"stepDis":0.01}],
         ],
         "vehicleController": {
             "motorNames": ["hybridMotor"],

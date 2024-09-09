@@ -1,4 +1,26 @@
 {
+"scintilla_hybridBattery": {
+    "information":{
+        "authors":"NineBitDog",
+        "name":"Hybrid Battery",
+        "value":180,
+    },
+    "slotType" : "scintilla_hybridBattery",
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$charge", "range", "kw", "Chassis", 250, 0, 250, "Hybrid Battery Charge", "Initial charge", {"stepDis":10}],
+    ],
+    "energyStorage": [
+        ["type", "name"],
+        ["battery", "hybridBattery"],
+    ],
+    "hybridBattery": {
+        "energyType":"electric",
+        "fuelCapacity": 250,
+        "startingFuelCapacity": "$charge",
+        "fuel": {"[engineGroup]:":["battery"]},
+    },
+},
 "scintilla_fueltank_R": {
     "information":{
         "authors":"BeamNG",

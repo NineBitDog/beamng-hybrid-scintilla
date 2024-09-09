@@ -1,8 +1,8 @@
 {
-    "scintilla_DSE_drivemodes_ICE": {
+    "scintilla_DSE_drivemodes_hybrid": {
         "information":{
-            "authors":"Diamondback",
-            "name":"Drive Modes",
+            "authors":"NineitDog",
+            "name":"Hybrid Drive Modes",
             "value":250,
         },
         "slotType" : "scintilla_DSE_drivemodes",

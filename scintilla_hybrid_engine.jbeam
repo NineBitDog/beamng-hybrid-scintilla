@@ -20,7 +20,7 @@
     "powertrain": [
         ["type", "name", "inputName", "inputIndex"],
         ["combustionEngine", "mainEngine", "dummy", 0],
-        ["electricEngine", "hybridMotor", "dummy", 0],
+        ["electricMotor", "hybridMotor", "dummy", 0],
     ],
     "mainEngine":{
         "torque":[

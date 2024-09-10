@@ -8,7 +8,6 @@
     "slotType" : "scintilla_driveshaft_F",
     "slots": [
         ["type", "default", "description"],
-        ["scintilla_driveshaft_F","scintilla_driveshaft_F", "Front Drive Shaft"],
         ["scintilla_halfshafts_F","scintilla_halfshafts_F", "Front Half Shafts"],
         ["scintilla_finaldrive_F","scintilla_finaldrive_F_489", "Front Final Drive", {"coreSlot":true}],
     ],
@@ -17,9 +16,6 @@
         //rear driveshaft
         ["shaft", "driveshaft_F", "hybridtransfercase", 1, {"breakTriggerBeam":"driveshaft", "gearRatio":1, "uiName":"Front Driveshaft", "electricsName":"driveshaft", "friction":1}],
     ],
-    "torsionReactorF": {
-        "torqueReactionNodes:":["e3r","e4r","e2l"],
-    },
     "flexbodies": [
          ["mesh", "[group]:", "nonFlexMaterials"],
          {"deformGroup":"driveshaft", "deformMaterialBase":"scintilla_engine", "deformMaterialDamaged":"invis"},

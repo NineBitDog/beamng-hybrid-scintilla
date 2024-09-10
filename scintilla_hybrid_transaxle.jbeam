@@ -47,7 +47,7 @@
     },
     "vehicleController": {
         "ignitionCutTime":0.04,
-        "automaticModes":"PRNDM",
+        "automaticModes":"PRND",
         "calculateOptimalLoadShiftPoints": true,
         "shiftDownRPMOffsetCoef":1.27,
         "aggressionHoldOffThrottleDelay":3,

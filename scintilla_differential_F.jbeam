@@ -9,7 +9,7 @@
     "powertrain" : [
         ["type", "name", "inputName", "inputIndex"],
         //rear driveshaft
-        ["torsionReactor", "torsionReactorF", "hybridMotor", 1, {}],
+        ["torsionReactor", "torsionReactorF", "hybridtransfercase", 1, {}],
         ["shaft", "driveshaft_F", "torsionReactorF", 1, {"breakTriggerBeam":"driveshaft", "gearRatio":1, "uiName":"Front Driveshaft", "electricsName":"driveshaft", "friction":1}],
     ],
     "torsionReactorF": {

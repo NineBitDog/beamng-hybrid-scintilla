@@ -26,6 +26,7 @@
         ["type", "name", "inputName", "inputIndex"],
         ["frictionClutch", "clutch", "mainEngine", 1],
         ["sequentialGearbox", "gearbox", "clutch", 1],
+        ["sequentialGearbox", "hybridGearbox", "hybridtransfercase", 1],
     ],
     "gearbox": {
         "uiName":"Gearbox",
@@ -40,6 +41,14 @@
         "gearWhineInputEvent": "event:>Vehicle>Transmission>straight_01>twine_in_race_sq",
         "gearWhineOutputEvent": "event:>Vehicle>Transmission>straight_01>twine_out_race_sq",
 
+    },
+    "hybridGearbox": {
+        "uiName":"Hybrid Gearbox",
+        "gearRatios":[0, 0, 1, 1, 1, 1, 1, 1],
+        "friction": 1.48,
+        "dynamicFriction": 0.0014,
+        "torqueLossCoef": 0.012,
+        "gearboxNode:":["tra1r"],
     },
     "clutch": {
         "clutchFreePlay":0.5,

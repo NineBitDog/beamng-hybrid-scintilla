@@ -205,6 +205,7 @@
         "highShiftUpRPM":7900,
         "revMatchThrottle":0.7,
         "motorNames": ["hybridMotor"],
+        "defaultAutomaticMode":"D",
         "defaultRegen": 0.5,
         "brakeRegenCoef": 1,
     },

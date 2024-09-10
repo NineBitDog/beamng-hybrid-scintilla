@@ -6,6 +6,12 @@
         "value":280,
     },
     "slotType" : "scintilla_driveshaft_F",
+    "slots": [
+        ["type", "default", "description"],
+        ["scintilla_driveshaft_F","scintilla_driveshaft_F", "Front Drive Shaft"],
+        ["scintilla_halfshafts_F","scintilla_halfshafts_F", "Front Half Shafts"],
+        ["scintilla_finaldrive_F","scintilla_finaldrive_F_489", "Front Final Drive", {"coreSlot":true}],
+    ],
     "powertrain" : [
         ["type", "name", "inputName", "inputIndex"],
         //rear driveshaft

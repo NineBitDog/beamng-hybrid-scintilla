@@ -252,7 +252,7 @@
           {"beamDeform":1120000,"beamStrength":"FLT_MAX"},
           //engine
           {"deformLimitExpansion":1.2},
-          {"deformGroup":"mainEngine", "deformationTriggerRatio":0.001}
+          {"deformGroup":"mainEngine", "deformationTriggerRatio":0.001},
           ["e1r","e1l"],
           ["e2r","e2l"],
           ["e3r","e3l"],
@@ -281,7 +281,7 @@
           ["e1l","e3r"],
           ["e2r","e4l"],
           ["e2l","e4r"],
-          {"deformGroup":""}
+          {"deformGroup":""},
 
           //engine mount nodes
           {"beamSpring":2956300,"beamDamp":130.43},
@@ -326,7 +326,7 @@
           ["e1l", "f9l"],
           ["e1r", "f9r"],
           ["e3l", "f3l"],
-          {"optional":false}
+          {"optional":false},
           {"deformGroup":""},
 
           {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},

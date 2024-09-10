@@ -38,7 +38,6 @@
             [10000, 278],
             [11000, 108],
         ],
-
         "idleRPM":920,
         //max physically capable of
         "maxRPM":9100,
@@ -144,6 +143,61 @@
         "energyStorage": ["hybridBattery"],
         "requiredEnergyType":"electricEnergy",
     }
+    "soundConfig": {
+        "sampleName": "V10_2_engine_rear",
+        "intakeMuffling": 0.55,
+
+        "mainGain": -7,
+        "onLoadGain":1,
+        "offLoadGain":0.65,
+
+        "maxLoadMix": 0.8,
+        "minLoadMix": 0.0
+
+        "lowShelfGain":5,
+        "lowShelfFreq":350,
+
+        "highShelfGain":-1,
+        "highShelfFreq":2700,
+
+        "eqLowGain": 2,
+        "eqLowFreq": 700,
+        "eqLowWidth": 0.15,
+
+        "eqHighGain": -8,
+        "eqHighFreq": 1800,
+        "eqHighWidth": 0.25,
+
+        "fundamentalFrequencyCylinderCount":10,
+        "eqFundamentalGain": 6,
+    },
+    "soundConfigExhaust": {
+        "sampleName": "V10_2_exhaust",
+
+        "mainGain": 1,
+        "onLoadGain":1,
+        "offLoadGain":0.52,
+
+        "maxLoadMix": 0.7,
+        "minLoadMix": 0,
+
+        "lowShelfGain":-5,
+        "lowShelfFreq":220,
+
+        "highShelfGain":2,
+        "highShelfFreq":4000,
+
+        "eqLowGain": 10
+        "eqLowFreq": 600,
+        "eqLowWidth": 0.15,
+
+        "eqHighGain": 10,
+        "eqHighFreq": 1500,
+        "eqHighWidth": 0.1,
+
+        "fundamentalFrequencyCylinderCount":10,
+        "eqFundamentalGain": -6,
+    },
     "vehicleController": {
         "clutchLaunchStartRPM":1800,
         "clutchLaunchTargetRPM":2500,

@@ -14,7 +14,7 @@
     "powertrain" : [
         ["type", "name", "inputName", "inputIndex"],
         //rear driveshaft
-        ["shaft", "driveshaft_F", "hybridGearbox", 1, {"breakTriggerBeam":"driveshaft", "gearRatio":1, "uiName":"Front Driveshaft", "electricsName":"driveshaft", "friction":1}],
+        ["shaft", "driveshaft_F", "hybridMotor", 1]
     ],
     "flexbodies": [
          ["mesh", "[group]:", "nonFlexMaterials"],

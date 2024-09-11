@@ -95,9 +95,6 @@
                             "yawControl.slipAngleThreshold": 0.2,
                         }],
 
-                        //AWD
-                        ["controller", {"controllerName":"electronicSplitShaftLock", "isEnabled":true, "minimumLock":0.0, "avDiffThreshold": 16}]
-
                         //Suspension
                         ["controller", {"controllerName":"adaptiveFrontDamper", "damperMode":"regular"}]
                         ["controller", {"controllerName":"adaptiveRearDamper", "damperMode":"regular"}]

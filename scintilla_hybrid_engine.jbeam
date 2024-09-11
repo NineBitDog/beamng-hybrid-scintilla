@@ -13,9 +13,10 @@
         ["scintilla_engine_5.0_ecu","scintilla_engine_5.0_ecu", "Engine Management", {"coreSlot":true}],
         ["scintilla_engine_5.0_internals","scintilla_engine_5.0_internals", "Engine Long Block", {"coreSlot":true}],
         ["scintilla_oilpan","scintilla_oilpan", "Oil Pan", {"coreSlot":true}],
-        ["scintilla_transaxle","scintilla_transaxle_7DCT", "Transaxle"],
+        ["scintilla_transaxle","scintilla_transaxle_6M_SQ_hybrid", "Transaxle"],
         ["scintilla_enginemounts","scintilla_enginemounts", "Engine Mounts"],
         ["n2o_system","", "Nitrous Oxide System"],
+        ["scintilla_hybridBattery", "hybridBattery", "Hybrid Battery"]
     ],
     "powertrain": [
         ["type", "name", "inputName", "inputIndex"],
@@ -124,17 +125,17 @@
             [3000, 425],
             [4000, 485],
             [5000, 507],
-            [6500, 350],
-            [8000, 350],
-            [9000, 350],
-            [10000, 350],
-            [11000, 350],
-            [12000, 350],
+            [6500, 700],
+            [8000, 700],
+            [9000, 700],
+            [10000, 700],
+            [11000, 700],
+            [11400, 145],
         ],
 
         "idleRPM":0,
         //max physically capable of
-        "maxRPM":15000,
+        "maxRPM":11400,
         "inertia":0.1,
         "friction":13
         "dynamicFriction":0.025,
@@ -206,7 +207,8 @@
         "revMatchThrottle":0.7,
         "motorNames": ["hybridMotor"],
         "defaultAutomaticMode":"D",
-        "defaultRegen": 0.5,
+        "defaultRegen": 0.75,
+        "regenThrottle": 1,
         "brakeRegenCoef": 1,
     },
     "flexbodies": [

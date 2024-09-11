@@ -8,7 +8,7 @@
     "slotType" : "scintilla_transaxle",
     "slots": [
         ["type", "default", "description"],
-        ["scintilla_transfer_case","scintilla_transfer_case_RWD","Transfer Case", {"coreSlot":true}],
+        ["scintilla_transfer_case","scintilla_transfer_case_hybrid","Transfer Case", {"coreSlot":true}],
         ["scintilla_differential_R","scintilla_differential_R_Race", "Rear Differential"],
         ["scintilla_differential_F","scintilla_differential_F_Race", "Front Differential"],
     ],
@@ -26,9 +26,7 @@
         ["type", "name", "inputName", "inputIndex"],
         ["frictionClutch", "clutch", "mainEngine", 1],
         ["sequentialGearbox", "gearbox", "clutch", 1],
-        ["frictionClutch", "hybridClutch", "hybridtransfercase", 1]
-        ["sequentialGearbox", "hybridGearbox", "hybridClutch", 1],
-    ],
+    ]
     "gearbox": {
         "uiName":"Gearbox",
         "gearRatios":["$=-$gear_R", 0, "$gear_1", "$gear_2", "$gear_3", "$gear_4", "$gear_5", "$gear_6"],
@@ -43,19 +41,7 @@
         "gearWhineOutputEvent": "event:>Vehicle>Transmission>straight_01>twine_out_race_sq",
 
     },
-    "hybridGearbox": {
-        "uiName":"Hybrid Gearbox",
-        "gearRatios":[0, 0, 1, 1, 1, 1, 1, 1],
-        "friction": 1.48,
-        "dynamicFriction": 0.0014,
-        "torqueLossCoef": 0.012,
-        "gearboxNode:":["tra1r"],
-    },
     "clutch": {
-        "clutchFreePlay":0.5,
-        "lockSpringCoef":0.3,
-    },
-    "hybridClutch": {
         "clutchFreePlay":0.5,
         "lockSpringCoef":0.3,
     },
